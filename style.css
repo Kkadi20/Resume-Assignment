@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    overflow-x: hidden;
+    list-style-type: none;
+    font-family: "Times New Roman", Times, serif;
+}
+
+body {
+    height: 100vh;
+    justify-content: center;
+    align-items: center; 
+
+}
+
+
+header {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+ul {
+    padding-left: 20px;
+}
+nav ul li a:hover {
+    color: #ff00009c;
+    transition: ease 0.3s ;
+    size:1rem;
+}
+
+section{
+    min-height: 50vh;
+    padding: 5rem 9% ;
+}
+
+.heading {
+    padding: 2rem ;
+    text-align: center;
+    font-size: 2rem;
+    color: #ff0000b4;
+}
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none;
+    border-radius: 5px;
+}
+.dark-mode {
+    background-color: #333;
+    color: white;
+}
+.toggle-mode {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+section{
+    min-height: 35vh;
+    padding: 5rem 9% ;
+}
+ /* skills section */
+
+ .skills .skilldiv {
+     width: 500px;
+     margin: 60px auto;
+     background-color: black;
+     color: #fff;
+     padding: 20px;
+     box-shadow: 0 14px 28px rgba(0,0,0,0.25),rgba(0,0,0,0.22) ;
+}
+
+.skills .skilldiv li {
+    margin: 20px 0;
+    padding: 10px ;
+}
+
+.skills .skilldiv .bar {
+    background: #352b48;
+    display: block;
+    height: 20px;
+    border :1px solid rgba(0,0,0,0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow:  0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.skills .skilldiv .bar:hover{
+    box-shadow:  0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+}
+
+.skills .skilldiv .bar span {
+    height: 20px ;
+    float: left;
+    background: linear-gradient(135deg, rgba(236,0,140,1)0%, rgba(252,103,103,1)100%);
+}
+
+.html{
+    width: 90%;
+    animation: html 3s ;
+}
+.css{
+    width: 85%;
+    animation: css 3s ;
+}
+.javascript{
+    width: 30%;
+    animation: javascript 3s ;
+}
+.git{
+    width: 50%;
+    animation: git 3s ;
+}
+.php{
+    width: 70%;
+    animation: php 3s ;
+}
+.sql{
+    width: 60%;
+    animation:sql 3s ;
+}
+@keyframes html {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+@keyframes css{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 85%;
+    }
+}
+@keyframes javascript {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 30%;
+    }
+}
+@keyframes git {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 50%;
+    }
+}
+@keyframes php {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+@keyframes sql {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+
+.education {
+    width: 75%;
+    padding: 35px 10px ;
+    margin-left: 7rem;
+     justify-content: center;
+    align-items: center; 
+   
+}
+.education .contents {
+    padding: 0px 30px;
+    border-left: 3.5px solid black;
+}
+.education .contents .box{
+    position: relative;
+    padding: 10px;
+    border: 1px solid #eaeaea;
+    background-color: #e1e1e1;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-bottom: 20px;
+} 
+.education .contents .box:hover{
+    box-shadow: 0px 3px 12px 0px #ff000092;
+    border: 1 px solid transparent;
+}
+.education .contents .box::before{
+    content: '';
+    position: absolute; 
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    right: calc(100% + 100px);
+    top: 0;
+    background-color: #ff0000f4;;
+    border: 2px  solid black;
+}
+
+.education .contents .box h4{
+    position: relative;
+    color:  #ff000092;
+}
+.education .contents .box h3{
+    font-size: 19px;
+    padding: 10px 0px 6px ;
+    color: #444;
+
+}
+.education .contents .box p {
+    /* line-height: 1.2; */
+    color: #666;
+    font-size:17px ;
+}
+.languages .landiv{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    flex-wrap:wrap;
+    gap: 1rem;
+   
+}
+
+.languages .landiv li{
+    box-shadow: 0px 3px 12px 0px #ff000092;
+    border: 1 px solid transparent;
+    position: relative;
+    padding: 10px;
+    border: 1px solid #eaeaea;
+    background-color: #e1e1e1;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.contact .contactdiv  {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap:wrap;
+    gap: 1rem;
+}
