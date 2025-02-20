@@ -10,18 +10,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const toggleMode = document.querySelector('.toggle-mode'); /* ... */
 
     // YOUR SAVE BUTTON LOGIC HERE! (This is crucial)
-    const saveButton = document.getElementById('saveButton');  // Make SURE the ID is correct!
-    if (saveButton) { // Check if the element exists!
-        saveButton.addEventListener('click', function() {
-            console.log("Save button clicked!"); // Confirm click is registered
+	//
+    document.addEventListener('DOMContentLoaded', function() {
+    const saveButton = document.getElementById('saveButton'); // Find the button
+    if (saveButton) { // Check if the button exists
+        saveButton.addEventListener('click', function() { // When clicked...
+            console.log("Save button clicked!"); // ...log a message to the console
 
-            // Your actual save functionality here...
-            // Example:
-            // const dataToSave = document.getElementById('someInput').value; // Get data
-            // ... (send data to server or local storage) ...
+            // ... (Your save functionality code goes here) ...
+            // For example, to save to local storage:
+            const contactData = { /* Get contact data */ };
+            localStorage.setItem('contactInfo', JSON.stringify(contactData));
+            alert("Contact info saved!");
+
         });
     } else {
-        console.error("Save button not found!"); // Debugging: Check the ID!
+        console.error("Save button not found!"); // If the button isn't found
     }
-
 }); // End of DOMContentLoaded
