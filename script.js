@@ -1,30 +1,34 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // All of your JavaScript code goes here:
     // Smooth Scrolling
-    document.querySelectorAll('nav ul li a').forEach(anchor => { /* ... */ });
+    document.querySelectorAll('nav ul li a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 
     // Back to Top Button
-    const backToTop = document.querySelector('.back-to-top'); /* ... */
+    const backToTop = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTop.style.display = 'block';
+        } else {
+            backToTop.style.display = 'none';
+        }
+    });
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 
     // Dark Mode Toggle
-    const toggleMode = document.querySelector('.toggle-mode'); /* ... */
+    const toggleMode = document.querySelector('.toggle-mode');
+    toggleMode.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+    });
 
-    // YOUR SAVE BUTTON LOGIC HERE! (This is crucial)
-	//
-    document.addEventListener('DOMContentLoaded', function() {
-    const saveButton = document.getElementById('saveButton'); // Find the button
-    if (saveButton) { // Check if the button exists
-        saveButton.addEventListener('click', function() { // When clicked...
-            console.log("Save button clicked!"); // ...log a message to the console
+    // Any other JavaScript code you have goes here.
+    // ... (For example, if you add a save button later, its logic would go here)
 
-            // ... (Your save functionality code goes here) ...
-            // For example, to save to local storage:
-            const contactData = { /* Get contact data */ };
-            localStorage.setItem('contactInfo', JSON.stringify(contactData));
-            alert("Contact info saved!");
-
-        });
-    } else {
-        console.error("Save button not found!"); // If the button isn't found
-    }
-}); // End of DOMContentLoaded
+}); // End of DOMContentLoaded (only one closing curly brace)
