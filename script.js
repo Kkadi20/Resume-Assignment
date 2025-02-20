@@ -1,28 +1,27 @@
-        // Smooth Scrolling
-        document.querySelectorAll('nav ul li a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+document.addEventListener('DOMContentLoaded', function() {
+    // All of your JavaScript code goes here:
+    // Smooth Scrolling
+    document.querySelectorAll('nav ul li a').forEach(anchor => { /* ... */ });
 
-        // Back to Top Button
-        const backToTop = document.querySelector('.back-to-top');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTop.style.display = 'block';
-            } else {
-                backToTop.style.display = 'none';
-            }
-        });
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+    // Back to Top Button
+    const backToTop = document.querySelector('.back-to-top'); /* ... */
 
-        // Dark Mode Toggle
-        const toggleMode = document.querySelector('.toggle-mode');
-        toggleMode.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
+    // Dark Mode Toggle
+    const toggleMode = document.querySelector('.toggle-mode'); /* ... */
+
+    // YOUR SAVE BUTTON LOGIC HERE! (This is crucial)
+    const saveButton = document.getElementById('saveButton');  // Make SURE the ID is correct!
+    if (saveButton) { // Check if the element exists!
+        saveButton.addEventListener('click', function() {
+            console.log("Save button clicked!"); // Confirm click is registered
+
+            // Your actual save functionality here...
+            // Example:
+            // const dataToSave = document.getElementById('someInput').value; // Get data
+            // ... (send data to server or local storage) ...
         });
+    } else {
+        console.error("Save button not found!"); // Debugging: Check the ID!
+    }
+
+}); // End of DOMContentLoaded
