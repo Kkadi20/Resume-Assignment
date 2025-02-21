@@ -268,7 +268,9 @@ section{
    
 }
 
-.languages .landiv li{
+
+
+.languages .landiv ul li{
     box-shadow: 0px 3px 12px 0px #ff000092;
     border: 1 px solid transparent;
     position: relative;
@@ -279,6 +281,7 @@ section{
     transition: all 0.4s;
     margin-bottom: 20px;
     margin-top: 20px;
+  
 }
 .contact .contactdiv  {
     display: grid;
@@ -286,3 +289,4 @@ section{
     flex-wrap:wrap;
     gap: 1rem;
 }
+
